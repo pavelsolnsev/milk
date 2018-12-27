@@ -1289,6 +1289,18 @@ iframe {
   display: block;
 }
 
+/*------error-------*/
+
+.error__text {
+  font-size: 18px;
+  line-height: 2;
+}
+
+.erorr {
+  padding-top: 111px;
+  padding-bottom: 166px;
+}
+
 /*------Media Queries-------*/
 
 @media screen and (min-width: 1200px) {
