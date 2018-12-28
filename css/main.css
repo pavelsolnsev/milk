@@ -1401,48 +1401,48 @@ iframe {
 
   }
 
-.slick-dots {
+  .slick-dots {
+      left: 47%;
+  }
+
+  .slick-next {
+    right: 42%;
+    } 
+
+  .slick-prev {
     left: 47%;
-}
+    } 
 
-.slick-next {
-  right: 42%;
-  } 
+  .bullet:before {
+      left: -50px;
+  }
+   
+   .slider__item_ex {
+      left: 7.4%;
+  }
 
-.slick-prev {
-  left: 47%;
-  } 
+  .slider__item_first {
+      left: 7.4%;
+  }
 
-.bullet:before {
-    left: -50px;
-}
- 
- .slider__item_ex {
-    left: 7.4%;
-}
+   .slider__item_mums {
+      left: 7.4%;
+  }
 
-.slider__item_first {
-    left: 7.4%;
-}
+  .btn__red__bottom {
+    margin-left: 45px;
+  }
 
- .slider__item_mums {
-    left: 7.4%;
-}
-
-.btn__red__bottom {
-  margin-left: 45px;
-}
-
-.circle {
-  position: absolute;
-  z-index: 1;
-  border-radius: 50%;
-  width: 245px;
-  height: 245px;
-  background-color: #fff;
-  left: -28px;
-  top: -70px;
-}
+  .circle {
+    position: absolute;
+    z-index: 1;
+    border-radius: 50%;
+    width: 245px;
+    height: 245px;
+    background-color: #fff;
+    left: -28px;
+    top: -70px;
+  }
 
   .btn__red__bottom {
     margin-left: 45px;
@@ -1474,19 +1474,19 @@ iframe {
     height: 480px;
     max-width: 100%;
     margin: 0 auto;
-}
+  }
 
-.slider__item_mums {
-    left: 10.4%;
-}
+  .slider__item_mums {
+      left: 10.4%;
+  }
 
-.slick-next {
-  right: 39%;
-  } 
+  .slick-next {
+    right: 39%;
+    } 
 
-.slick-prev {
-  left: 47%;
-  } 
+  .slick-prev {
+    left: 47%;
+    } 
 
   .events {
     margin-bottom: 30px;
@@ -1503,13 +1503,13 @@ iframe {
   }
   
 
- .slider__item_ex {
+  .slider__item_ex {
     left: 10%;
-}
+  }
 
-.slider__item_first {
-    left: 5.4%;
-}
+  .slider__item_first {
+      left: 5.4%;
+  }
 
 .circle {
     position: absolute;
@@ -1607,24 +1607,24 @@ iframe {
     /*------index-------*/
   /*------Header-------*/
 
- .circle {
-    width: 0px;
-    left: -55px !important;
-}
+   .circle {
+      width: 0px;
+      left: -55px !important;
+  }
 
-.slider__img {
-    height: 480px;
-    max-width: 100%;
-    margin: 0 auto;
-}
+  .slider__img {
+      height: 480px;
+      max-width: 100%;
+      margin: 0 auto;
+  }
 
-.slick-dots {
-    left: 42%;
-}
+  .slick-dots {
+      left: 42%;
+  }
 
-.slider__item_mums {
-    left: 10.4%;
-}
+  .slider__item_mums {
+      left: 10.4%;
+  }
 
   .slick-next {
     right: 43.7%;
