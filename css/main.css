@@ -1932,17 +1932,16 @@ h1.big-slider__title {
 h5 {
   font-size: 17px;
 }
-.slider__item_child {
+  .slider__item_child {
     right: 1.5%;
     top: 28%;
-
-}
-.slider__item_first {
+  }
+  
+  .slider__item_first {
     left: 2%;
     top: 34%;
     width: 300px;
 }
-
 
  .slider__item_ex {
     left: 8%;
@@ -1981,8 +1980,7 @@ h5 {
 
 .signature:before {
     width: 91.5%;
-}
-
+  }
 }
 
 @media screen and (max-width:1024px) {
@@ -1991,8 +1989,6 @@ h5 {
     left: -43px;
   }
 }
-
-
 
 @media screen and (max-width: 321px) {
   .slick-next {
@@ -2003,10 +1999,9 @@ h5 {
     }
 }
 
-
 @media screen and (max-width: 375px) {
  
   .slick-next {
     right: 33%;
-}
+  }
 }
