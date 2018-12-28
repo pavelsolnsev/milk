@@ -2,7 +2,7 @@ $(function () {
 
     // Большой слайдер
     
-    $('.big-slider').slick({
+    $('.slider__element').slick({
         dots: true,
         infinite: false,
         prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
