@@ -143,6 +143,8 @@ input, a {
   background: #fff;
   padding: 27px 0 50px;
   box-shadow: 0px 20px 500px 10px #1c377136;
+  position: relative;
+  z-index: 100;
 }
 
 .menu {
@@ -195,9 +197,10 @@ input, a {
 }
 
 .slider__item-one {
-  background: url(../img/slide-1.png) center center / cover;
+  background: url(../img/slide-1.png);
   height: 480px;
-  background-position: bottom;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 .slider__wrap {
