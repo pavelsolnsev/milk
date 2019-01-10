@@ -76,7 +76,7 @@ $('.slider-nav').slick({
 $(document).ready(function() {
     $('[data-submit]').on('click', function(e) {
         e.preventDefault();
-        $(this).parent('form').submit();
+        $('form').submit();
     })
     $.validator.addMethod(
         "regex",

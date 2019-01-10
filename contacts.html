@@ -185,7 +185,7 @@
 			</div>
 			<div class="container-fluid con-f d-none">
 				<form action="success.php" class="js-form contact" id="popupResult">
-					<h3 class="record-title text-center text-lg-left">
+					<h3 class="record-title record-title_contact text-center text-lg-left">
 						Заказать звонок
 					</h3>
 					<p class="record__text text-center text-lg-left">
@@ -196,20 +196,19 @@
 						<input type="text" name="name" required placeholder="Вопрос *"  class="form-control form__field">
 				        <input type="text" name="tel" required placeholder="Телефон *"  class="form-control form__field">
 					</div>
-			        <div class="form__item">
-			        	<!-- Чекбоксы  -->
-				        
-				        <label for="first" class="form__label d-flex">
-				        	<input type="checkbox" class="form__checkbox" id="first" name="check[]" value="Cогласен(на) на обработку персональных данных"><br>
-				        	Cогласен(на) на обработку персональных данных
-				        </label>
-			        </div>
-				    <button class="btn__red__bottom act font-bold" data-submit>Отправить</button>
+			      <div class="form__item">
+				        	<!-- Чекбоксы  -->     
+			        <label for="first" class="form__label form__label_margin d-flex">
+			        	<input type="checkbox" class="form__checkbox" id="first" name="check[]" value="Cогласен(на) на обработку персональных данных"><br>
+			        	Cогласен(на) на обработку персональных данных
+			        </label>
+					    <button class="btn__red__bottom font-bold" data-submit>Отправить</button>
+				    </div>
 			    </form>
 			</div>
 			<div class="container-fluid con-w d-none">
 				<form action="success.php" class="js-form contact text-center text-lg-right" id="popupResult">
-					<h3 class="record-title text-center text-lg-left">
+					<h3 class="record-title record-title_contact text-center text-lg-left">
 						Написать письмо
 					</h3>
 					<p class="record__text text-center text-lg-left">
@@ -220,15 +219,17 @@
 				        <input type="text" name="tel" required placeholder="Телефон *"  class="form-control form__field">
 				        <input type="text" name="name" required placeholder="Тема *"  class="form-control form__field">
 					</div>
-			        <div class="form__item flex-colomn d-lg-flex justify-content-between">
-			        	<!-- Чекбоксы  -->
-				        <label for="first" class="form__label d-flex text-center text-md-left">
-				        	<input type="checkbox" class="form__checkbox" id="first" name="check[]" value="Cогласен(на) на обработку персональных данных"><br>
-				        	Cогласен(на) на обработку персональных данных
-				        </label>
+		        <div class="form__item flex-colomn d-lg-flex justify-content-between">
+		        	<!-- Чекбоксы  -->
+			        <label for="first" class="form__label form__label_margin d-flex text-center text-md-left">
+			        	<input type="checkbox" class="form__checkbox" id="first" name="check[]" value="Cогласен(на) на обработку персональных данных"><br>
+			        	Cогласен(на) на обработку персональных данных
+			        </label>
+			        <div class="form__item-tow">
 				        <textarea type="mesage" name="mesage" required placeholder="Текст *"  class="mesage "></textarea>
-			        </div>
-				    <button class="btn__red__bottom act font-bold" data-submit>Отправить</button>
+				    		<button class="btn__red__bottom font-bold" data-submit>Отправить</button>
+			    		</div>
+			    	</div>
 			    </form>
 			</div>
 			<div class="container">
