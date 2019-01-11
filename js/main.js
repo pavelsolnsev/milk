@@ -171,6 +171,11 @@ $(document).ready(function() {
     $('.js-form').each(function() {
         valEl($(this));
     });
+
+    $(".menu-two li a").click(function() {
+    $(".menu-two li a").removeClass('active');
+    $(this).addClass('active');
+  });
     
 });
 

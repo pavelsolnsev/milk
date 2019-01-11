@@ -171,6 +171,10 @@ input, a {
   letter-spacing: 0.1em;
 }
 
+.menu__link:hover {
+  color: #000;
+}
+
 .bullet:before {
   color: #000;
   content:"\2022";
@@ -1211,7 +1215,7 @@ div.msg, ul li i:before, ul li i:after {
   font-size: 16px;
 }
 
-.menu-two li a:active, .menu-two li a:focus {
+.active {
   color: #000;
   font-weight: bold;
 }
@@ -1287,6 +1291,9 @@ div.msg, ul li i:before, ul li i:after {
   font-size: 18px;
   margin-top: 24px;
   margin-bottom: 39px;
+}
+
+.award-text span {
   font-weight: bold;
 }
 
@@ -1574,6 +1581,17 @@ iframe {
    margin: 21px 10px 0 0;
   }
 
+  .award-text-face {
+    margin: 14px auto 65px auto;
+    width: 200px;
+  }
+
+  .product__img-face {
+    width: 221px;
+    margin: 0 auto;
+    display: block;
+  }
+
 }
 
 /*576-768px*/
@@ -1655,6 +1673,23 @@ iframe {
     width: 50%;
     margin: 0 auto;
     text-align: center;
+  }
+
+  .product__img {
+    width: 221px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .product__text, .award-text {
+    margin: 14px auto 65px auto;
+    width: 200px;
+  }
+
+  .video__img, .about__img {
+    width: 221px;
+    margin: 0 auto;
+    display: block;
   }
 
 }
@@ -1749,23 +1784,6 @@ iframe {
   }
 
 /*------products-------*/
-
-  .product__img {
-    width: 221px;
-    margin: 0 auto;
-    display: block;
-  }
-
-  .product__text, .award-text {
-    margin: 14px auto 65px auto;
-    width: 200px;
-  }
-
-  .video__img, .about__img {
-    width: 221px;
-    margin: 0 auto;
-    display: block;
-  }
 
   h2 {
     font-size: 22px;
