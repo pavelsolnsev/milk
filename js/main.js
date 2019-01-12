@@ -13,9 +13,16 @@ $(function () {
 //Hamburger opener
 
    $('.hamburger').click(function () {
-    $('.menu-collapse').toggleClass('d-none').css('order', '1');
-    $('.menu').toggleClass('menu-opened');
+    $('.menu-collapse').removeClass('d-none');
+    $('.menu').addClass('menu-opened');
    });
+
+      $('.menu__close').click(function () {
+    $('.menu-collapse').addClass('d-none');
+    $('.menu').removeClass('menu-opened');
+   });
+
+
 
 
 
@@ -172,11 +179,7 @@ $(document).ready(function() {
         valEl($(this));
     });
 
-    $(".menu-two li a").click(function() {
-    $(".menu-two li a").removeClass('active');
-    $(this).addClass('active');
-  });
-    
+  
 });
 
 
