@@ -1,14 +1,11 @@
 $(function () {
 
-    // Большой слайдер
-    
-    $('.slider__element').slick({
-        dots: true,
-        infinite: false,
-        prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
-        nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
-    });
-
+  // Большой слайдер
+  $('.slider__element').slick({
+      dots: true,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-angle-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fa fa-angle-right"></i></button>',
+  });
 
 //Hamburger opener
 
@@ -22,38 +19,37 @@ $(function () {
     $('.menu').removeClass('menu-opened');
    });
 
+  //Слайдер экскурсии
 
-
-
-
-//Слайдер экскурсии
- $('.slider-for').slick({
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  fade: true,
-  asNavFor: '.slider-nav'
-});
-$('.slider-nav').slick({
-  slidesToShow: 4,
-  slidesToScroll: 1,
-  asNavFor: '.slider-for',
-  dots: true,
-  centerMode: true,
-  focusOnSelect: true
-});
+   $('.slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: true,
+    asNavFor: '.slider-nav'
+  });
+  $('.slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    asNavFor: '.slider-for',
+    dots: true,
+    centerMode: true,
+    focusOnSelect: true
+  });
 
 
 // Заказать звонок
 
    $('.call').click(function () {
-    $('.con-f').toggleClass('d-none').css('order', '1');
+    $('.con-f').toggleClass('d-none');
+    $('.con-w').addClass('d-none');
    });
 
 // Написать письмо
 
    $('.write').click(function () {
-    $('.con-w').toggleClass('d-none').css('order', '1');
+    $('.con-w').toggleClass('d-none');
+    $('.con-f').addClass('d-none');
    });
 
 
@@ -80,10 +76,11 @@ $('.slider-nav').slick({
 
 //Валидация и отправка формы
 
+
 $(document).ready(function() {
     $('[data-submit]').on('click', function(e) {
         e.preventDefault();
-        $('form').submit();
+        $(this).parents('form').submit();
     })
     $.validator.addMethod(
         "regex",
@@ -106,11 +103,17 @@ $(document).ready(function() {
                 name: {
                     required: true
                 },
+
+                check: {
+                    required: true,
+                },
+
                 email: {
                     required: true,
                     email: true
                 }
             },
+
             messages: {
                 tel: {
                     required: 'Поле обязательно для заполнения',
@@ -123,6 +126,10 @@ $(document).ready(function() {
                     required: 'Поле обязательно для заполнения',
                     email: 'Неверный формат E-mail'
                 }
+            },
+
+            errorPlacement: function(error, element) {
+              error.appendTo(element.parent());
             },
 
             // Начинаем проверку id="" формы
@@ -147,7 +154,7 @@ $(document).ready(function() {
                             });
                         break;
                     // Если у формы id="popupResult" - делаем:
-                    case 'popupResult':
+                    case 'popupCall':
                         $.ajax({
                                 type: 'POST',
                                 url: $form.attr('action'),
@@ -159,6 +166,8 @@ $(document).ready(function() {
                                 }, 800);
                                 setTimeout(function() {
                                     $('#overlay').fadeIn();
+                                    $('.popup').hide();
+                                    $('#thx').show();
                                     $form.trigger('reset');
                                     //строки для остлеживания целей в Я.Метрике и Google Analytics
                                 }, 1100);
@@ -168,6 +177,30 @@ $(document).ready(function() {
 
                             });
                         break;
+                      // письмо 
+                    case 'popupLetter':
+                      $.ajax({
+                              type: 'POST',
+                              url: $form.attr('action'),
+                              data: $form.serialize(),
+                          })
+                          .always(function(response) {
+                              setTimeout(function() {
+                                  $('#loader').fadeOut();
+                              }, 800);
+                              setTimeout(function() {
+                                  $('#overlayLat').fadeIn();
+                                  $('.popupLat').hide();
+                                  $('#thh').show();
+                                  $form.trigger('reset');
+                                  //строки для остлеживания целей в Я.Метрике и Google Analytics
+                              }, 1100);
+                              $('#overlay, #overlayLat').on('click', function(e) {
+                                  $(this).fadeOut();
+                              });
+
+                          });
+                      break;
                 }
                 return false;
             }
@@ -179,8 +212,6 @@ $(document).ready(function() {
         valEl($(this));
     });
 
-  
 });
-
 
   });

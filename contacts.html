@@ -59,10 +59,10 @@
 								<img src="img/logo NF molocniy zavod cmyk.png" alt="logo" class="menu__logo">
 							</a>
 						</div>
-						<h1 class="logo__text">
+						<a href="index.html" class="logo__text">
 							Наро-фоминский<br>
 							Молочный завод
-						</h1>	
+						</a href="index.html">	
 					</div>
 					<div class="d-none d-md-block col-md-5">
 						<ul class="menu d-flex justify-content-between">
@@ -84,15 +84,15 @@
 						</ul>
 					</div>
 						<div class="d-none col-md-5 menu-collapse">
-						<ul class="menu d-flex justify-content-between">
+						<ul class="menu d-flex">
 							<li class="menu__list-logo d-flex">
 								<a href="index.html" class="hamburger-link">
 									<img src="img/logo NF molocniy zavod cmyk.png" alt="logo" class="hamburger-logo">
 								</a>
-								<h1 class="logo__text-hamburger">
+								<a href="index.html" class="logo__text-hamburger">
 									Наро-фоминский<br>
 									Молочный завод
-								</h1>
+								</a href="index.html">
 								<div class="menu__close"></div>
 							</li>
 							<li class="menu__item-hamburger">
@@ -134,7 +134,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="offer">
+		<div class="offer offer-contact">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 text-center text-lg-left">
@@ -171,9 +171,9 @@
 							<p class="data__address">
 								+7 (496) 343-65-12 
 							</p>
-							<button class="data__btn call">
+							<a href="#popupCall" class="data__btn call">
 								Заказать звонок 
-							</button>
+							</a>
 							</p>
 						</div>
 					</div>
@@ -185,15 +185,15 @@
 							<p class="data__address">
 								narmolz@mail.ru
 							</p>
-							<button class="data__btn write">
+							<a href="#popupLetter" class="data__btn write">
 								Написать письмо  
-							</button>
+							</a>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="container-fluid con-f d-none">
-				<form action="success.php" class="js-form contact" id="popupResult">
+				<form action="success.php" class="js-form contact" id="popupCall">
 					<h3 class="record-title record-title_contact text-center text-lg-left">
 						Заказать звонок
 					</h3>
@@ -202,21 +202,35 @@
 					</p>
 					<div class="form__block  d-flex justify-content-between">
 						<input type="text" name="name" required placeholder="ФИО *"  class="form-control form__field">
-						<input type="text" name="name" required placeholder="Вопрос *"  class="form-control form__field">
-				        <input type="text" name="tel" required placeholder="Телефон *"  class="form-control form__field">
+						<input type="text" name="question" required placeholder="Вопрос *"  class="form-control form__field">
+				    <input type="tel" name="tel" required placeholder="Телефон *"  class="form-control form__field">
 					</div>
 			      <div class="form__item">
 				        	<!-- Чекбоксы  -->     
-			        <label for="first" class="form__label form__label_margin d-flex">
-			        	<input type="checkbox" class="form__checkbox" id="first" name="check[]" value="Cогласен(на) на обработку персональных данных"><br>
+			        <label for="first" class="form__label d-flex">
+			        	<input type="checkbox" class="form__checkbox" id="first" name="check" value="Cогласен(на) на обработку персональных данных"><br>
 			        	Cогласен(на) на обработку персональных данных
 			        </label>
-					    <button class="btn__red__bottom font-bold" data-submit>Отправить</button>
+					    <button class="btn__red__bottom font-bold btn__red__bottom-partner" data-submit>Отправить</button>
 				    </div>
+				    <!-- Сообщение "спасибо" после отправки формы -->
+						<div id="overlay" class="overlay-contact">
+							<div id="thx" class="popup">
+								<h4>
+									Спасибо
+								</h4>
+								<p>
+									Ваша заявка успешно отправлена
+								</p>
+								<a href="#popupCall">
+									Отправить еще одину заявку
+								</a>
+							</div>
+						</div>
 			    </form>
 			</div>
 			<div class="container-fluid con-w d-none">
-				<form action="success.php" class="js-form contact text-center text-lg-right" id="popupResult">
+				<form action="success.php" class="js-form contact text-center text-lg-right" id="popupLetter">
 					<h3 class="record-title record-title_contact text-center text-lg-left">
 						Написать письмо
 					</h3>
@@ -224,14 +238,14 @@
 						Отправьте нам свой вопрос и мы на него обязательно ответим
 					</p>
 					<div class="form__block  d-flex justify-content-between">
-						<input type="text" name="name" required placeholder="ФИО *"  class="form-control form__field">
-				        <input type="text" name="tel" required placeholder="Телефон *"  class="form-control form__field">
-				        <input type="text" name="name" required placeholder="Тема *"  class="form-control form__field">
+							<input type="text" name="name" required placeholder="ФИО *"  class="form-control form__field">
+				        <input type="tel" name="tel" required placeholder="Телефон *"  class="form-control form__field">
+				        <input type="text" name="theme" required placeholder="Тема *"  class="form-control form__field">
 					</div>
 		        <div class="form__item flex-colomn d-lg-flex justify-content-between">
 		        	<!-- Чекбоксы  -->
 			        <label for="first" class="form__label form__label_margin d-flex text-md-left">
-			        	<input type="checkbox" class="form__checkbox" id="first" name="check[]" value="Cогласен(на) на обработку персональных данных"><br>
+			        	<input type="checkbox" class="form__checkbox form__checkboxLat" id="first" name="check" value="Cогласен(на) на обработку персональных данных"><br>
 			        	Cогласен(на) на обработку персональных данных
 			        </label>
 			        <div class="form__item-tow">
@@ -239,6 +253,20 @@
 				    		<button class="btn__red__bottom font-bold" data-submit>Отправить</button>
 			    		</div>
 			    	</div>
+			    	<!-- Сообщение "спасибо" после отправки формы -->
+						<div id="overlayLat" class="overlay-contact">
+							<div id="thh" class="popupLat">
+								<h4>
+									Спасибо
+								</h4>
+								<p>
+									Ваше письмо успешно отправлено
+								</p>
+								<a href="#popupLetter">
+									Написать еще одно
+								</a>
+							</div>
+						</div>
 			    </form>
 			</div>
 			<div class="container">
@@ -344,24 +372,9 @@
 		</div>
 	</footer>
 	<!-- Индикация процесса отправки формы -->
-				<div id="loader">
-					<img src="img/ripple.svg">
-				</div>
-			
-			<!-- Сообщение "спасибо" после отправки формы -->
-				<div id="overlay">
-					<div id="thx">
-						<h4>
-							Спасибо
-						</h4>
-						<p>
-							Ваша заявка успешно отправлен
-						</p>
-						<a href="vacancies.html">
-							Заказать еще один звонок
-						</a>
-					</div>
-				</div>
+	<div id="loader">
+		<img src="img/ripple.svg">
+	</div>
 		<!-- Main JS--->
 	<script src="js/jquery-3.3.1.min.js"></script>
 	<script src="js/slick.min.js"></script>
