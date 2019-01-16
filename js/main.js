@@ -37,7 +37,6 @@ $(function () {
     focusOnSelect: true
   });
 
-
 // Заказать звонок
 
    $('.call').click(function () {
@@ -51,28 +50,6 @@ $(function () {
     $('.con-w').toggleClass('d-none');
     $('.con-f').addClass('d-none');
    });
-
-
-
- // Map
-   // $('.map1').click(function () {
-   //  $('.territory').toggleClass('d-block');
-   //  $('.malkovo').toggleClass('d-none');
-   //  $('.kalinec').toggleClass('d-none');
-   // });
-
-   // $('.map2').click(function () {
-   //  $('.territory').toggleClass('d-none');
-   //  $('.malkovo').toggleClass('d-block');
-   //  $('.kalinec').toggleClass('d-none');
-   // });
-
-   //  $('.map3').click(function () {
-   //  $('.territory').toggleClass('d-none');
-   //  $('.malkovo').toggleClass('d-none');
-   //  $('.kalinec').toggleClass('d-block');
-   // });
-
 
 //Валидация и отправка формы
 
@@ -94,7 +71,7 @@ $(document).ready(function() {
     // Функция валидации и вывода сообщений
     function valEl(el) {
 
-        el.validate({
+        el.validate ({
             rules: {
                 tel: {
                     required: true,
@@ -129,7 +106,7 @@ $(document).ready(function() {
             },
 
             errorPlacement: function(error, element) {
-              error.appendTo(element.parent());
+              error.appendTo($('.erorrMessage'));
             },
 
             // Начинаем проверку id="" формы
@@ -206,7 +183,6 @@ $(document).ready(function() {
             }
         })
     }
-
     // Запускаем механизм валидации форм, если у них есть класс .js-form
     $('.js-form').each(function() {
         valEl($(this));

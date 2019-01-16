@@ -137,7 +137,7 @@
 		<div class="offer offer-contact">
 			<div class="container">
 				<div class="row">
-					<div class="col-12 text-center text-lg-left">
+					<div class="col-12 text-lg-left">
 						<h3 class="offer-title">
 							Контактная информация
 						</h3>
@@ -194,12 +194,13 @@
 			</div>
 			<div class="container-fluid con-f d-none">
 				<form action="success.php" class="js-form contact" id="popupCall">
-					<h3 class="record-title record-title_contact text-center text-lg-left">
+					<h3 class="record-title record-title_contact text-left">
 						Заказать звонок
 					</h3>
-					<p class="record__text text-center text-lg-left">
+					<p class="record__text text-left">
 						Оставьте номер и мы вам перезвоним
 					</p>
+					<div class="erorrMessage"></div>
 					<div class="form__block  d-flex justify-content-between">
 						<input type="text" name="name" required placeholder="ФИО *"  class="form-control form__field">
 						<input type="text" name="question" required placeholder="Вопрос *"  class="form-control form__field">
@@ -231,16 +232,17 @@
 			</div>
 			<div class="container-fluid con-w d-none">
 				<form action="success.php" class="js-form contact text-center text-lg-right" id="popupLetter">
-					<h3 class="record-title record-title_contact text-center text-lg-left">
+					<h3 class="record-title record-title_contact text-left">
 						Написать письмо
 					</h3>
-					<p class="record__text text-center text-lg-left">
+					<p class="record__text text-left">
 						Отправьте нам свой вопрос и мы на него обязательно ответим
 					</p>
+					<div class="erorrMessage"></div>
 					<div class="form__block  d-flex justify-content-between">
-							<input type="text" name="name" required placeholder="ФИО *"  class="form-control form__field">
-				        <input type="tel" name="tel" required placeholder="Телефон *"  class="form-control form__field">
-				        <input type="text" name="theme" required placeholder="Тема *"  class="form-control form__field">
+						<input type="text" name="name" required placeholder="ФИО *"  class="form-control form__field">
+			       <input type="tel" name="tel" required placeholder="Телефон *"  class="form-control form__field">
+			       <input type="text" name="theme" required placeholder="Тема *"  class="form-control form__field">
 					</div>
 		        <div class="form__item flex-colomn d-lg-flex justify-content-between">
 		        	<!-- Чекбоксы  -->
