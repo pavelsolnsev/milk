@@ -41,6 +41,16 @@
        url('../fonts/PTSans-Bold.svg#svgFontName') format('svg'); /* Legacy iOS */
 }
 
+@font-face {
+  font-family: 'OpenSans-Italic';
+  src: url('../fonts/OpenSans-Italic.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/OpenSans-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/OpenSans-Italic.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/OpenSans-Italic.woff') format('woff'), /* Pretty Modern Browsers */
+       url('../fonts/OpenSans-Italic.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/OpenSans-Italic.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 /*------Specification-------*/
 
 body {
@@ -757,11 +767,15 @@ body {
 }
 
 .btn__red__bottom-vacancies {
-  width: 74%;
+  width: 74.1%;
 }
 
 .btn__red__bottom-partner {
-  width: 66%;
+  width: 65.4%;
+}
+
+.btn__red__bottom-excursion {
+  width: 65.9%;
 }
 
 .btn__red__bottom:hover {
@@ -937,6 +951,9 @@ input.valid {
   cursor: pointer; 
   left: 1px;
   position: relative;
+  font-size: 18px;
+  font-family: 'PTSans'; 
+  font-weight: 400;
 }
 
 .tabs label:before {
@@ -947,7 +964,8 @@ input.valid {
 
 .tabs input:checked + label { 
   color: #000;
-  font-family: 'PTSans-Bold'; 
+  font-family: 'PTSans'; 
+  font-weight: 700;
   background: white;
   border-top: 1px solid #DEE8F2; 
   border-bottom: 1px solid #DEE8F2; 
@@ -955,6 +973,7 @@ input.valid {
   border-right: 1px solid #fff;
   z-index: 5;
   padding-left: 38px;
+  font-size: 18px;
 }
 
 .tabs input:checked + label:before {
@@ -986,11 +1005,14 @@ input.valid {
 .tabs__text {
   margin-bottom: 15px;
   font-size: 16px !important;
+  font-weight: 400;
+  line-height: 20px;
 }
 
 .tabs__conditions {
-  font-weight: bold;
-  font-style: italic;
+  font-weight: 700;
+  font-family: 'OpenSans-Italic';
+  font-size: 16px;
 }
 
 /*------Аккордеон на минимальных разрешениях-------*/
@@ -1014,7 +1036,7 @@ input.valid {
 }
 /* заголовки панелей аккордеона */
 .accordion h2 {
-  font-size: 16px;
+  font-size: 18px;
   letter-spacing: 1px;
   display: block;
   margin: 0;
@@ -1026,12 +1048,8 @@ input.valid {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.accordion h2:hover {
-  background-color: #1f66C6;
-  border: 1px solid #1f66C6;
-  color: #fff;
+  font-family: 'PTSans';
+  font-weight: 700;
 }
 
 /* Формируем блоки с содерханием */
@@ -1047,9 +1065,6 @@ input.valid {
 /* оформляем параграфы */
 .msg p {
   color: #000;
-  font-size: 18px;
-  line-height: 20px;
-  letter-spacing: 1px;
   padding: 0 20px
 }
  
@@ -1130,7 +1145,7 @@ input.valid {
 .accordion ul li i:after {
   transform: translate(2px, 0) rotate(-45deg);
 }
- 
+
 /* Делаем чекбокс скрытым*/
 .accordion ul li input[type=checkbox] {
   position: absolute;
@@ -1730,11 +1745,11 @@ iframe {
   .form__label  {
     width: 230px;
     text-align: left;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   .mesage {
-    margin-top: 20px;
+    margin-top: 4px;
   }
 
   .form__field, .form__record {
@@ -1752,15 +1767,12 @@ iframe {
 /*------Families-------*/
 /*------Distributions-------*/
   .stations {
-    margin-bottom: 40px;
+    margin-bottom: 19px;
+    margin-top: 15px;
   }
 
   .place {
     margin-bottom: 40px;
-  }
-
-  .place__img {
-    margin: 0 auto 15px;
   }
 
   .contact {
@@ -1776,10 +1788,6 @@ iframe {
 
   /*------Contacts-------*/
   /*------Offer-------*/
-
-  .data__title {
-    margin-top: 30px;
-  }
 
   .distributions-title {
     top: 0;
@@ -1809,7 +1817,7 @@ iframe {
     display: block;
   }
 
-  .item {
+  .item__text {
     margin-bottom: 30px;
   }
 
@@ -1834,7 +1842,7 @@ iframe {
   }
 
   .data {
-    margin: 30px 0 17px;
+    margin: 15px 0 17px;
   }
 
   .offer-contact {
@@ -1881,6 +1889,9 @@ iframe {
 
   .news {
     margin-bottom: 0;
+  }
+  .place__text {
+    font-size: 18px;
   }
 }
 
@@ -2094,10 +2105,6 @@ iframe {
 
   .offer-contact {
     padding-bottom: 0;
-  }
-
-  .data__address {
-    font-size: 16px;
   }
 
   .reviews__txt br {
