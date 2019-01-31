@@ -269,8 +269,6 @@ ymaps.ready(init);
                 }
             }
         }
-
-
          $('[data-fancybox]').on("click", function () {
         $.fancybox({
             href: this.href,
