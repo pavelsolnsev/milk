@@ -68,6 +68,8 @@ $(document).ready(function() {
         "Please check your input."
     );
 
+    
+
     // Функция валидации и вывода сообщений
     function valEl(el) {
 
@@ -120,6 +122,9 @@ $(document).ready(function() {
                     required: 'Пожалуйста подтвердите согласие на обработку персональных данных',
                 }
             },
+
+            focusCleanup: true,
+            focusInvalid: false,
 
             errorPlacement: function(error, element) {
               error.appendTo($('.erorrMessage'));
@@ -205,5 +210,73 @@ $(document).ready(function() {
     });
 
 });
+// yandex maps
+ymaps.ready(init);
 
-  });
+        function init() {
+            // Создание экземпляра карты.
+            var myMap = new ymaps.Map('map', {
+                center: [50.443705, 30.530946],
+                zoom: 14
+            }),
+            // Эту группу не будем добавлять на карту, чтобы помещенные в нее геообъекты были не видны.
+            hidden = new ymaps.GeoObjectCollection(),
+            // Эту группу добавим на карту.
+            visible = new ymaps.GeoObjectCollection()
+            
+
+            // Наполняем группы геообъектами.
+            visible
+                .add(new ymaps.Placemark([55.382124, 36.722761], { id: 'group-1-1' }))
+                .add(new ymaps.Placemark([55.382605, 36.719787], { id: 'group-1-2' }))
+                .add(new ymaps.Placemark([55.385602, 36.735049], { id: 'group-1-3' }))
+                .add(new ymaps.Placemark([55.548660, 37.066052], { id: 'group-1-4' }))
+                .add(new ymaps.Placemark([55.566053, 36.995318], { id: 'group-1-5' }));
+            // Добавляем все группы на карту.
+            myMap.geoObjects.add(visible);
+
+            // Выставляем масштаб карты чтобы были видны все группы.
+            myMap.setBounds(visible.getBounds());
+
+            // Обрабатываем клики на пунктах меню эелементов группы.
+            $('.mapM').on('click', function (e) {
+                // Отменяем основное поведение (переход по ссылке)
+                e.preventDefault();
+
+                itemToggle(this.id);
+            });
+
+            // Ищем нужную метку и открываем/закрываем ее балун.
+            function itemToggle(id) {
+                var it = visible.getIterator(),
+                    group;
+
+                while(placemark = it.getNext()) {
+                    if(placemark.properties.get('id') === id) {
+                            if(placemark.balloon.isOpen()) {
+                                placemark.balloon.close();
+                            }
+                            else {
+                                myMap.panTo(placemark.geometry.getCoordinates(), {
+                                    delay: 0,
+                                    callback: function () {
+                                        placemark.balloon.open();
+                                    }
+                                });
+                            }
+                            return;
+                        }
+                }
+            }
+        }
+
+
+         $('[data-fancybox]').on("click", function () {
+        $.fancybox({
+            href: this.href,
+            type: 'iframe',
+            padding:5
+        });
+        return false
+    });
+});
