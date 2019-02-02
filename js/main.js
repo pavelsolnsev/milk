@@ -266,9 +266,10 @@ ymaps.ready(init);
                                 myMap.panTo(placemark.geometry.getCoordinates(), {
                                     delay: 0,
                                     callback: function () {
-                                        placemark.balloon.open();
+                                      
                                     }
                                 });
+                                placemark.balloon.open();
                             }
                             return;
                         }
