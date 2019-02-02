@@ -1682,8 +1682,6 @@ div.msg, ul li i:before, ul li i:after {
   width: 100%;
 }
 
-
-
 /*------Media Queries-------*/
 
 /*992-1200px*/
@@ -2098,8 +2096,12 @@ div.msg, ul li i:before, ul li i:after {
     margin-top: 20px;
   }
 
-  .map, .story {
+  .story {
     padding-bottom: 56px;
+  }
+
+  .map {
+    padding-bottom: 20px;
   }
 
   .record, .mission {
