@@ -224,7 +224,6 @@ ymaps.ready(init);
             // Эту группу добавим на карту.
             visible = new ymaps.GeoObjectCollection()
             
-
             // Наполняем группы геообъектами.
             visible
                 .add(new ymaps.Placemark([55.382124, 36.722761], { id: 'group-1-1' }))
@@ -232,11 +231,18 @@ ymaps.ready(init);
                 .add(new ymaps.Placemark([55.385602, 36.735049], { id: 'group-1-3' }))
                 .add(new ymaps.Placemark([55.548660, 37.066052], { id: 'group-1-4' }))
                 .add(new ymaps.Placemark([55.566053, 36.995318], { id: 'group-1-5' }));
+
+              ymaps.geoQuery(visible).setOptions({
+              iconLayout: 'default#image',
+              iconImageHref: 'img/Group.png',
+              iconImageSize: [46, 57],
+              iconImageOffset: [-23, -57]
+            })
             // Добавляем все группы на карту.
             myMap.geoObjects.add(visible);
 
             // Выставляем масштаб карты чтобы были видны все группы.
-            myMap.setBounds(visible.getBounds());
+            // myMap.setBounds(visible.getBounds());
 
             // Обрабатываем клики на пунктах меню эелементов группы.
             $('.mapM').on('click', function (e) {
