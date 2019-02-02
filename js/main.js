@@ -235,7 +235,7 @@ ymaps.ready(init);
               ymaps.geoQuery(visible).setOptions({
               iconLayout: 'default#image',
               iconImageHref: 'img/Group.png',
-              iconImageSize: [46, 57],
+              iconImageSize: [26, 40],
               iconImageOffset: [-23, -57]
             })
             // Добавляем все группы на карту.
