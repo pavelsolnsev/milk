@@ -211,8 +211,7 @@ $(document).ready(function() {
 
 });
 // yandex maps
-ymaps.ready(init);
-
+  ymaps.ready(init);
         function init() {
             // Создание экземпляра карты.
             var myMap = new ymaps.Map('map', {
@@ -266,10 +265,9 @@ ymaps.ready(init);
                                 myMap.panTo(placemark.geometry.getCoordinates(), {
                                     delay: 0,
                                     callback: function () {
-                                      
+                                      placemark.balloon.open();
                                     }
                                 });
-                                placemark.balloon.open();
                             }
                             return;
                         }
