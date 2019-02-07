@@ -260,9 +260,9 @@ input, a, textarea {
 }
 
 .slider__content-main {
-  width: 520px;
+  width: 497px;
   text-align: center;
-  margin-left: -258px;
+  margin-left: -243px;
   top: 32%;
   position: absolute;
   left: 50%;
@@ -960,6 +960,7 @@ input.valid {
   content: '—';
   display: inline-block;
   margin-right: 15px;
+  color: #000;
 }
 
 .tabs input:checked + label { 
