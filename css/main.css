@@ -945,14 +945,13 @@ input.valid {
 .tabs label { 
   display: block; 
   width: 180px; 
-  padding: 9px; 
+  padding: 4px; 
   color: #17437F; 
   background: #fff; 
   cursor: pointer; 
   left: 1px;
   position: relative;
   font-size: 18px;
-  font-family: 'PTSans'; 
   font-weight: 400;
 }
 
@@ -965,7 +964,6 @@ input.valid {
 
 .tabs input:checked + label { 
   color: #000;
-  font-family: 'PTSans'; 
   font-weight: 700;
   background: white;
   border-top: 1px solid #DEE8F2; 
