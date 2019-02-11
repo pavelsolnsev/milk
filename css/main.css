@@ -1467,7 +1467,7 @@ div.msg, ul li i:before, ul li i:after {
 }
 
 .product__overlay:hover {
-  opacity: 1
+  opacity: 0.9;
 }
 
 /*------awards-------*/
