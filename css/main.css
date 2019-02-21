@@ -1385,6 +1385,10 @@ div.msg, ul li i:before, ul li i:after {
   margin-bottom: 30px;
 }
 
+.menu-two:first-child {
+  margin-bottom: 0;
+}
+
 .menu-two li a {
   font-family: 'PTSans-Caption';
   font-size: 16px;
@@ -1459,7 +1463,6 @@ div.msg, ul li i:before, ul li i:after {
   padding: 0px 35px;
   align-items: center;
   background-color: #fff;
-
 }
 
 .product {
