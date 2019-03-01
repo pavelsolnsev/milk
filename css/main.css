@@ -1218,6 +1218,10 @@ div.msg, ul li i:before, ul li i:after {
   padding: 20px 0 80px;
 }
 
+.address-families {
+  padding-bottom: 54px;
+}
+
 .address-title {
   margin-bottom: 60px;
 }
@@ -1225,7 +1229,6 @@ div.msg, ul li i:before, ul li i:after {
 .stations {
   font-size: 16px;
   font-family: 'PTSans-CaptionBold';
-  margin-top: 40px;
 }
 
 .place__img {
@@ -1238,15 +1241,21 @@ div.msg, ul li i:before, ul li i:after {
 .place__text {
   font-size: 16px;
   font-family: 'PTSans-Regular';
-
 }
 
 .selectItem {
   width: 300px;
   padding: 10px;
   border-radius: 30px;
-  margin-top: 40px;
+  margin-top: 18px;
   outline: none;
+  background: transparent;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 /*------Child-------*/
@@ -1644,12 +1653,16 @@ div.msg, ul li i:before, ul li i:after {
 .map1 {
   width: 100%; 
   height: 100%;
-   padding: 0;
-    margin: 0;
+  padding: 0;  
+  margin: 0;
 }
 
 .maps {
   height: 639px;
+}
+
+.maps-margin {
+  margin-bottom: 40px;
 }
 
 .mapM {
@@ -1682,6 +1695,17 @@ div.msg, ul li i:before, ul li i:after {
 
 .img-wrap img {
   width: 100%;
+}
+
+.places {
+  text-align: left;
+  background: url(../img/selectArrow.png) no-repeat right;
+  width: 277px;
+  height: 84px;
+}
+
+.record-title_child {
+  margin-bottom: 30px;
 }
 
 /*------Media Queries-------*/
@@ -1805,6 +1829,7 @@ div.msg, ul li i:before, ul li i:after {
   .stations {
     margin-bottom: 19px;
     margin-top: 15px;
+    text-align: left;
   }
 
   .contact {
@@ -1918,8 +1943,18 @@ div.msg, ul li i:before, ul li i:after {
   .news {
     margin-bottom: 0;
   }
+
   .place__text {
     font-size: 18px;
+  }
+
+  .selectItem {
+    margin-top: 17px;
+    text-align: left;
+  }
+
+  .maps-margin {
+    margin-bottom: 20px;
   }
 }
 
@@ -2116,6 +2151,10 @@ div.msg, ul li i:before, ul li i:after {
 
   .address {
     padding-bottom: 16px;
+  }
+
+  .address-child {
+    padding-bottom: 27px;
   }
 
   .paragraphs {
