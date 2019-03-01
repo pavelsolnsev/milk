@@ -1250,6 +1250,7 @@ div.msg, ul li i:before, ul li i:after {
   margin-top: 18px;
   outline: none;
   background: transparent;
+  padding-right: 39px;
 }
 
 select {
